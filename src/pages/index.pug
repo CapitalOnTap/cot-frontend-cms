@@ -1,0 +1,49 @@
+extends ../pages-template/layout.pug
+include ../content/CTAMixins.pug
+
+
+block body
+    include ../components/banner/banner
+    include ../components/cards/cards
+    include ../components/odometer/odometer
+    +ImageAndTextCTA(
+      'Small Business Credit Card',
+      'Running a business is hard. We believe that accessing funding for your business shouldn\'t be complicated or time-consuming. See why we\'ve helped over 70,000 businesses get funding to grow their business.',
+      'img/small-business-credit-card.png',
+      'bg-info',
+      '200',
+      'order-1 order-lg-2',
+      true)
+    +ImageAndTextCTA(
+      'Cash or card? Your choice.',
+      'You control how to use your funding. Spend on your Business Credit Card or send the funds straight to your high street bank account.',
+      'img/mobile-1.png',
+      'bg-light',
+      '300')
+    +ImageAndTextCTA(
+      'Say goodbye to terrible fees.',
+      'We don\'t charge any FX, ATM, or other hidden fees.',
+      'img/mobile-2.png',
+      'bg-light',
+      '300')
+    +ImageAndTextCTA(
+      'Small Business Credit Card',
+      'Actual rate may vary based on your business profile, representative APR of 39.4%.',
+      'img/mobile-3.png',
+      'bg-light',
+      '300')
+    +ImageAndTextCTA(
+      'Get as many cards as you need to run your business.',
+      'Get supplementary cards for free for your employees and partners.',
+      'img/mobile-4.png',
+      'bg-light',
+      '300')
+    +ImageAndTextCTA(
+      'Self-Employed Credit Card',
+      'Running a business is hard. We believe that accessing funding for your business shouldn\'t be complicated or time-consuming. See why we\'ve helped over 70,000 businesses get funding to grow their business.',
+      'img/small-business-credit-card-2.png',
+      'bg-info',
+      '300',
+      'order-1 order-lg-2',
+      true)
+    include ../components//richText/richText

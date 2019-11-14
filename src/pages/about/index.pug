@@ -1,0 +1,9 @@
+extends ../../pages-template/layout.pug
+
+block headTitle
+    title #{about.pageTitle} - #{common.pageTitle}
+
+block body
+    h1= about.pageTitle
+    .col !{about.pageContent}
+    include ../../components/carousel/carousel

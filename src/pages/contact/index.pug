@@ -1,0 +1,8 @@
+extends ../../pages-template/layout.pug
+
+block headTitle
+    title #{contact.pageTitle} - #{common.pageTitle}
+
+block body
+    h1= contact.pageTitle
+    .col !{contact.pageContent}

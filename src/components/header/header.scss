@@ -1,0 +1,7 @@
+header#header {
+    z-index: 100;
+    animation-duration: .5s;
+    body.js-header-down & {
+      top: -96px;
+    }
+}

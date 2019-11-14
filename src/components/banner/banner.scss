@@ -1,0 +1,24 @@
+#homepage-banner{
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+#card-black{
+  left: 0;
+  bottom: 7rem;
+  z-index: 4;
+}
+#card-blue{
+  left: 0;
+  bottom: 4.5rem;
+  z-index: 3;
+}
+#card-yellow{
+  z-index: 2;
+}
+@include media-breakpoint-up(sm){
+  #card-blue,
+  #card-black{
+    left: auto;
+  }
+}

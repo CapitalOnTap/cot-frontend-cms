@@ -1,0 +1,43 @@
+//fonts
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Raleway:500,700,300);
+
+// Material icons
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import '~material-icons/css/material-icons.scss';
+
+// Theming Bootstrap Variable defaults https://getbootstrap.com/docs/4.3/getting-started/theming/
+$theme-colors: (
+  "primary": #263355,
+  "secondary": #486baf,
+  "warning": #f2c14a,
+  "info": #c0ddeb,
+  "light": #F5F7F8
+);
+$colors: (
+  "yellow": #f2c14a,
+  "cyan": #c0ddeb,
+  "blue": #466BAF
+);
+$body-color: #263355;
+$font-family-base: "Lato", sans-serif;
+$headings-font-weight: bold;
+$border-width: 2px;
+$font-size-sm: .875rem;
+$btn-padding-y: .7rem;
+$btn-padding-x: 2rem;
+// $enable-responsive-font-sizes: true;
+
+//Font sizes
+$h1-font-size: 2rem;
+$h2-font-size: 1.875rem;
+
+$color-primary: #263355;
+$white: #ffffff;
+$gray: #e8ebee;
+$blue: #466BAF;
+$color-secondary: lighten($color-primary, 37.5%);
+
+// Import bootstrap function and mixing to the theme
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";

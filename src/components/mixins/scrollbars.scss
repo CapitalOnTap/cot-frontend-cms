@@ -1,0 +1,30 @@
+/**
+ * Mixin scrollbar
+ */
+ @mixin scrollbar($size, $primary, $secondary) {
+    ::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background: $primary;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: $secondary;
+    }
+
+    html {
+        // Firefox
+        scrollbar-width: thin;
+        scrollbar-color: $primary $secondary;
+    }
+
+    body {
+        scrollbar-face-color: $primary;
+        scrollbar-track-color: $secondary;
+    }
+}
+
+@include scrollbar(.8rem, $color-primary, $color-secondary);

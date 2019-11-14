@@ -1,0 +1,52 @@
+// http://www.cssarrowplease.com/
+.top-arrow{
+  &:after,
+  &:before{
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after{
+    border-color: transparent;
+    border-bottom-color: $white;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+}
+.bottom-arrow{
+  &:after,
+  &:before{
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:before{
+    border-color: transparent;
+    border-top-color: $white;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+}
+
+.divider{
+  height: 1px;
+}
+
+.dropdown-toggle{
+  &:after{
+    display: none !important;
+  }
+}
+.blue{
+  color: $blue;
+}

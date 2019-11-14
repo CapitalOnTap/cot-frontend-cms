@@ -1,0 +1,16 @@
+nav.navbar.navbar-light.bg-light.justify-content-between#top-nav.py-0.px-2
+  div.container.p-0
+    img(data-src="img/moblie_cot_logo.svg" class='img-fluid d-md-none' alt='Capital On Tap')
+    img(data-src="img/cot_logo.svg" class='img-fluid d-none d-md-block' alt='Capital On Tap')
+    div.d-flex
+      include ../countrySelector/countrySelector
+      ul.nav
+        li.nav-item.active
+          a(class='nav-link d-flex font-weight-bold' href="#")
+            span.mi.pr-1.mi-phone
+            span.d-md-none Call Us
+            span.d-none.d-md-block 020 8962 7401
+        li.nav-item
+          a(class="nav-link d-flex font-weight-bold" href="#")
+            span.mi.pr-1.mi-exit-to-app
+            span Log in

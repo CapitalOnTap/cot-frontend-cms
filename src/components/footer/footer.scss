@@ -1,0 +1,8 @@
+#social-nav,
+#hygiene-nav{
+  li{
+    &:last-child{
+      margin-right: 0 !important;
+    }
+  }
+}

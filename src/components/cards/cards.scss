@@ -1,0 +1,14 @@
+@include media-breakpoint-up(sm){
+  .container{
+    .card-columns {
+      column-count: 2;
+    }
+  }
+}
+@include media-breakpoint-up(lg){
+  .container{
+    .card-columns {
+      column-count: 4;
+    }
+  }
+}
