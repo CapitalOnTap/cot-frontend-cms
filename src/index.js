@@ -42,7 +42,7 @@ const sticky = new StickyHeader();
 sticky.init();
 
 // Odometer https://github.hubspot.com/odometer
-import '../node_modules/odometer/themes/odometer-theme-default.css';
+import '../node_modules/odometer/themes/odometer-theme-car.css';
 import COTOdometer from './components/odometer/odometer';
 const odometer = new COTOdometer();
 odometer.init();

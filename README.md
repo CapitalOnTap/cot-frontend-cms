@@ -11,8 +11,6 @@ This is the repo for the Capital On Tap Front End CMS Website Project.
 
 ## Installation
 
-cd assets/
-
 'yarn install'
 
 ## Usage
