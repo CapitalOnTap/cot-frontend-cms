@@ -4,21 +4,18 @@
   background-size: cover;
 }
 #card-black{
-  left: 0;
+  left: 50%;
   bottom: 7rem;
   z-index: 4;
+  transform: translateX(-50%);
 }
 #card-blue{
-  left: 0;
+  left: 50%;
   bottom: 4.5rem;
   z-index: 3;
+  transform: translateX(-50%);
 }
 #card-yellow{
   z-index: 2;
 }
-@include media-breakpoint-up(sm){
-  #card-blue,
-  #card-black{
-    left: auto;
-  }
-}
+
