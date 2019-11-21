@@ -4,6 +4,10 @@ block headTitle
     title #{about.pageTitle} - #{common.pageTitle}
 
 block body
-    h1= about.pageTitle
-    .col !{about.pageContent}
-    include ../../components/carousel/carousel
+  main#about.pt-8
+    div.container-fluid
+      div.row
+        include ../../components/grid/grid
+    //- h1= about.pageTitle
+    //- .col !{about.pageContent}
+    //- include ../../components/carousel/carousel

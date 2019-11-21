@@ -1,5 +1,5 @@
 mixin ImageAndTextCTA(title, desc, src, bgColour='bg-light', animationDelay='300', order='', btn=false)
-  section(class="bg-info px-2 pt-3 pb-0 container-fluid" class=bgColour)
+  section(class="bg-info px-2 pt-5 pb-0 container-fluid" class=bgColour)
     div(class="container")
       div.row
         div(class="col-lg-6 text-center order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay=animationDelay data-aos-easing="ease-in-out")
@@ -10,4 +10,4 @@ mixin ImageAndTextCTA(title, desc, src, bgColour='bg-light', animationDelay='300
             p= desc
             if btn
               div
-                button(class="btn btn-secondary d-flex font-weight-bold m-auto m-lg-0") FIND OUT MORE
+                a( href="#" class="btn btn-secondary text-white font-weight-bold m-auto m-lg-0") FIND OUT MORE

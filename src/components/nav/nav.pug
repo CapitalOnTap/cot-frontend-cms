@@ -1,4 +1,4 @@
-nav#main-nav.navbar.navbar-light.bg-primary.justify-content-between.py-1.px-2
+nav#main-nav.navbar.navbar-light.bg-primary.justify-content-between.p-2
   div.container.p-0.flex-nowrap.position-relative
     ul.nav
       li.nav-item.active
@@ -11,11 +11,12 @@ nav#main-nav.navbar.navbar-light.bg-primary.justify-content-between.py-1.px-2
         a(class='nav-link dropdown-toggle text-white d-flex align-items-center' id="navbarDesktop" href="/about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
           span About Us
           span.mi.mi-keyboard-arrow-down
-        ul(class="dropdown-menu bg-white p-1 m-0 mt-1 border-0 top-arrow" aria-labelledby="navbarDesktop")
+        ul(class="dropdown-menu bg-white py-2 w-100 border-0 mt-2 top-arrow" aria-labelledby="dropdownMenuButton")
           li
-            a(class="dropdown-item py-1 text-primary p-1" href="#") Our Story
+            a(class="dropdown-item py-1 text-primary py-1" href="#") Our Story
           li
-            a(class="dropdown-item py-1 text-primary p-1" href="#") Customer Stories
+            a(class="dropdown-item py-1 text-primary py-1" href="#") Customer Stories
+    a( href="#" class="btn btn-light btn-sm font-weight-bold m-auto m-lg-0 d-none d-md-flex") APPLY NOW
     include mobileNav
     button(class="navbar-toggler p-0 border-0 position-absolute d-md-none" id="nav-button" type="button")
       div.animated-icon#animated

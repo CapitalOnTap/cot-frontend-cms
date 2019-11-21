@@ -18,6 +18,14 @@ $colors: (
   "cyan": #c0ddeb,
   "blue": #466BAF
 );
+
+//Spacing
+$spacers: (
+  1: .5rem,
+  2: 1rem,
+  8: 8rem
+);
+
 $body-color: #263355;
 $font-family-base: "Lato", sans-serif;
 $headings-font-weight: bold;
