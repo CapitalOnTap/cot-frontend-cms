@@ -1,13 +1,11 @@
-import '../../../node_modules/odometer/odometer';
-
 class COTOdometer {
   constructor(){
     this.storageKey = "incrementVal";
     this.storageSetKey = "incrementValSet";
     this.odometerEl = document.querySelector('.odometer');
     this.counter = 1000000000;
-    this.kk = 1302;
-    this.localStorageSupported = typeof window['localStorage'] != "undefined" && window['localStorage'] != null;
+    this.kk = 1342;
+    this.localStorageSupported = typeof window['localStorage'] != "undefined" && window['localStorage'] != null;    
   }
 
   add(key, item) {
@@ -82,7 +80,7 @@ class COTOdometer {
           this.add(this.storageSetKey, this.counter);
           this.add(this.storageKey, this.counter);
         }
-      }, 1000);
+      }, 3000);
 
     })
   }
