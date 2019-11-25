@@ -1,10 +1,15 @@
 extends ../pages-template/layout.pug
 include ../content/CTAMixins.pug
+include ../content/hero2ColBanner.pug
 
 
 block body
   main#home.pt-8
-    include ../components/banner/banner
+    +hero2ColBanner("home",
+      "url(img/homepage-banner.png)",
+      "Credit cards built for small businesses",
+      "text-primary"
+    )
     include ../components/cards/cards
     include ../components/odometer/odometer
     +ImageAndTextCTA(

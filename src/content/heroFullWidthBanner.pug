@@ -1,0 +1,16 @@
+mixin heroFullWidthBanner(page, bgImage, title, colour)
+  section(id=page class="hero-banner p-0 img-fluid container-fluid lazy d-flex justify-content-center" class=colour data-bg=bgImage)
+    div.container.px-0.py-lg-5.d-flex.justify-content-center.flex-column
+      div.text-center
+        h1= title
+        p Up to #[strong £50,000] in minutes to grow your business.
+      div.container.d-lg-flex.flex-lg-row-reverse.justify-content-lg-around
+        div.d-md-flex.flex-md-column-reverse.justify-content-center
+          div.text-center.mb-2
+            a(href="#" class="btn btn-warning font-weight-bold m-auto m-lg-0") GET MY CARD NOW
+            small.mt-2.d-block  *Applying for a card will not affect your credit score
+            div.trustpilot.mt-2
+            script(type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async="")
+            div(class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b637fa0340045cd0c936" data-businessunit-id="510fb574000064000521dae7" data-style-height="20px" data-style-width="100%" data-theme="dark" style="position: relative;")
+              iframe(frameborder="0" scrolling="no" title="Customer reviews powered by Trustpilot" src="https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&amp;businessunitId=510fb574000064000521dae7#locale=en-GB&amp;styleHeight=20px&amp;styleWidth=100%25&amp;theme=light" style="position: relative; height: 40px; width: auto !important; border-style: none;  display: block; overflow: hidden;")
+
