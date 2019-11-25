@@ -6,14 +6,16 @@
   "scripts": {
     "build": "rimraf .\\dist && webpack --config config/webpack.config.js --progress --env production",
     "watch": "webpack --config config/webpack.config.js --watch",
-    "start": "rimraf .\\dist && webpack-dev-server --config config/webpack.config.js"
+    "start": "rimraf .\\dist && webpack-dev-server --config config/webpack.config.js",
+    "storybook": "start-storybook"
   },
   "keywords": [],
   "author": "Capital On Tap",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.6.2",
+    "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.6.2",
+    "@storybook/html": "^5.2.6",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",

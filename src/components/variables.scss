@@ -51,3 +51,10 @@ $color-secondary: lighten($color-primary, 37.5%);
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
+
+
+@include media-breakpoint-up(md){
+  h1{
+    font-size: 3rem;
+  }
+}
