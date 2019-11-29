@@ -1,0 +1,33 @@
+@import './variables';
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/reboot";
+
+.bootstrap-iso {
+  @import '~normalize.css/normalize.css';
+  @import './fonts';
+  @import './base/_general';
+  @import './base/_print';
+  @import '~bootstrap/scss/bootstrap';
+  @import '../components/ie/ie.scss';
+
+  @import './mixins/scrollbars.scss';
+  @import '../components/header/header.scss';
+  @import '../components/carousel/carousel.scss';
+  @import '../components/nav/nav.scss';
+  @import '../components/topnav/topnav.scss';
+  @import '../components/footer/footer.scss';
+  @import '../components/cards/cards.scss';
+  @import '../components/banner/banner.scss';
+  @import '../components/odometer/odometer.scss';
+
+
+  @include media-breakpoint-up(md){
+    h1{
+      font-size: 3rem;
+    }
+  }
+
+}

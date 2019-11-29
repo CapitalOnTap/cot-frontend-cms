@@ -1,10 +1,3 @@
-//fonts
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Raleway:500,700,300);
-
-// Material icons
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-@import '~material-icons/css/material-icons.scss';
-
 // Theming Bootstrap Variable defaults https://getbootstrap.com/docs/4.3/getting-started/theming/
 $theme-colors: (
   "primary": #263355,
@@ -46,17 +39,3 @@ $white: #ffffff;
 $gray: #e8ebee;
 $blue: #466BAF;
 $color-secondary: lighten($color-primary, 37.5%);
-
-// Import bootstrap function and mixing to the theme
-.bootstrap-iso {
-  @import "~bootstrap/scss/bootstrap";
-  // @import "../../node_modules/bootstrap/scss/functions";
-  // @import "../../node_modules/bootstrap/scss/variables";
-  // @import "../../node_modules/bootstrap/scss/mixins";
-  // @import '../../node_modules/bootstrap/scss/bootstrap';
-  @include media-breakpoint-up(md){
-    h1{
-      font-size: 3rem;
-    }
-  }
-}

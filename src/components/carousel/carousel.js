@@ -1,6 +1,5 @@
 import Flickity from 'flickity';
 import 'flickity/dist/flickity.min.css';
-import './carousel.scss';
 
 class Carousel {
     constructor(container) {
@@ -16,5 +15,5 @@ class Carousel {
         });
     }
 }
- 
+
 export default Carousel;

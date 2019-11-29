@@ -1,5 +1,0 @@
-@import '../mixins/typography.scss';
-
-html {
-    @include interpolate(font-size, $responsive-min-screen, $responsive-max-screen, $responsive-min-value, $responsive-max-value);
-}

@@ -124,7 +124,7 @@ module.exports = (env) => {
                             loader: 'sass-loader',
                             options: {
                                 sourceMap: true,
-                                prependData: setup.paths.cssVariables,
+                                prependData: setup.paths.sassFile,
                                 sassOptions: {
                                     includePaths: [
                                         path.join(__dirname, setup.paths.src)
@@ -185,7 +185,7 @@ module.exports = (env) => {
             new CleanWebpackPlugin(),
             new StylelintBarePlugin({
                 configFile: path.resolve(__dirname, './../config/stylelint.config.js'),
-                files: path.resolve(__dirname, './../src/components/**/*.scss')
+                files: path.resolve(__dirname, './../src/scss/**/*.scss')
             }),
             // Css file for site \/
             new MiniCssExtractPlugin({
@@ -203,9 +203,9 @@ module.exports = (env) => {
                 }
             ]),
             // Compress images
-            new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
-            // Compress and export WebP images
-            new ImageminWebpWebpackPlugin(),
+            // new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
+            // // Compress and export WebP images
+            // new ImageminWebpWebpackPlugin(),
         ]
             // Generate html pages
             .concat(htmlPlugins)

@@ -1,25 +1,7 @@
-//// INDEX
-//
-// - CSS - Variables
-// - CSS - Normalize.css
-// - JS - Add js class to html
-// - Component - Navigation menu button
-// - Component - Sticky Header
-// - Component - Carousels
-// - JS - Smooth scroll
-// - JS - Load images
-// - CSS - All other custom css
-// - CSS - IE Fixes
-// - CSS - Print styles
-
-// CSS - normalize.css - import vendor css
-import 'normalize.css/normalize.css';
-// CSS - Variables this needs to be imported before bootstrap in order to override variables
-import './components/variables.scss';
+import './scss/main.scss';
 
 // Bootstrap framework import plugins individually as needed https://getbootstrap.com/docs/4.3/
 // Import bootstrap
-// import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap/js/dist/dropdown.js'
 import 'bootstrap/js/dist/collapse.js';
 // import 'bootstrap/js/dist/util';
@@ -85,21 +67,4 @@ AOS.init()
 
 // https://daneden.github.io/animate.css/
 import '../node_modules/animate.css/animate.min.css';
-
-// CSS - Import all custom CSS style
-// import './components/base/general.scss';
-// import './components/mixins/scrollbars.scss';
-// import './components/header/header.scss';
-// import './components/nav/nav.scss';
-// import './components/topnav/topnav.scss';
-// import './components/footer/footer.scss';
-// import './components/cards/cards.scss';
-// import './components/banner/banner.scss';
-// import './components/odometer/odometer.scss';
-
-// // CSS - IE Fixes
-// import './components/ie/ie.scss';
-
-// // CSS - Print styles
-// import './components/base/print.scss';
 
