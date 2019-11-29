@@ -48,13 +48,15 @@ $blue: #466BAF;
 $color-secondary: lighten($color-primary, 37.5%);
 
 // Import bootstrap function and mixing to the theme
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
-
-
-@include media-breakpoint-up(md){
-  h1{
-    font-size: 3rem;
+.bootstrap-iso {
+  @import "~bootstrap/scss/bootstrap";
+  // @import "../../node_modules/bootstrap/scss/functions";
+  // @import "../../node_modules/bootstrap/scss/variables";
+  // @import "../../node_modules/bootstrap/scss/mixins";
+  // @import '../../node_modules/bootstrap/scss/bootstrap';
+  @include media-breakpoint-up(md){
+    h1{
+      font-size: 3rem;
+    }
   }
 }

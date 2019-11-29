@@ -19,7 +19,7 @@ import './components/variables.scss';
 
 // Bootstrap framework import plugins individually as needed https://getbootstrap.com/docs/4.3/
 // Import bootstrap
-import 'bootstrap/scss/bootstrap.scss';
+// import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap/js/dist/dropdown.js'
 import 'bootstrap/js/dist/collapse.js';
 // import 'bootstrap/js/dist/util';
@@ -87,19 +87,19 @@ AOS.init()
 import '../node_modules/animate.css/animate.min.css';
 
 // CSS - Import all custom CSS style
-import './components/base/general.scss';
-import './components/mixins/scrollbars.scss';
-import './components/header/header.scss';
-import './components/nav/nav.scss';
-import './components/topnav/topnav.scss';
-import './components/footer/footer.scss';
-import './components/cards/cards.scss';
-import './components/banner/banner.scss';
-import './components/odometer/odometer.scss';
+// import './components/base/general.scss';
+// import './components/mixins/scrollbars.scss';
+// import './components/header/header.scss';
+// import './components/nav/nav.scss';
+// import './components/topnav/topnav.scss';
+// import './components/footer/footer.scss';
+// import './components/cards/cards.scss';
+// import './components/banner/banner.scss';
+// import './components/odometer/odometer.scss';
 
-// CSS - IE Fixes
-import './components/ie/ie.scss';
+// // CSS - IE Fixes
+// import './components/ie/ie.scss';
 
-// CSS - Print styles
-import './components/base/print.scss';
+// // CSS - Print styles
+// import './components/base/print.scss';
 
