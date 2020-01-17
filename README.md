@@ -21,7 +21,7 @@ This is the repo for the Capital On Tap Front End CMS Website Project.
 
 ### Start Development
 
-'yarn run start'
+'yarn run dev'
 
 ## Notes
 
