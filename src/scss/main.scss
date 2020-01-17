@@ -1,11 +1,18 @@
-@import './variables';
-
+@import './_variables';
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/reboot";
 
 .bootstrap-iso {
+  /* stylelint-disable */
+  @import './_variables';
+  @import "../../node_modules/bootstrap/scss/functions";
+  @import "../../node_modules/bootstrap/scss/variables";
+  @import "../../node_modules/bootstrap/scss/mixins";
+  @import "../../node_modules/bootstrap/scss/reboot";
+  /* stylelint-enable */
+
   @import '~normalize.css/normalize.css';
   @import './fonts';
   @import './base/_general';
@@ -22,6 +29,7 @@
   @import '../components/cards/cards.scss';
   @import '../components/banner/banner.scss';
   @import '../components/odometer/odometer.scss';
+  @import '../components/faq/faq.scss';
 
 
   @include media-breakpoint-up(md){

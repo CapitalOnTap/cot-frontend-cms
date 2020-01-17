@@ -1,13 +1,86 @@
-@include media-breakpoint-up(sm){
-  .container{
-    .card-columns {
-      column-count: 2;
+@include media-breakpoint-up(xs) {
+  .container {
+    .card-columns-1 {
+      column-count: 1;
+    }
+
+    .card-columns-2 {
+      column-count: 1;
+
+      .card {
+        margin-bottom: 5px;
+      }
+    }
+
+    .card-columns-3 {
+      column-count: 1;
+
+      .card {
+        margin-bottom: 5px;
+      }
+    }
+
+    .card-columns-4 {
+      column-count: 1;
+
+      .card {
+        margin-bottom: 5px;
+      }
     }
   }
 }
-@include media-breakpoint-up(lg){
-  .container{
-    .card-columns {
+
+@include media-breakpoint-up(sm) {
+  .container {
+    .card-columns-1 {
+      column-count: 1;
+
+      .card {
+        margin-bottom: 5px;
+      }
+    }
+
+    .card-columns-2 {
+      column-count: 2;
+
+      .card {
+        margin-bottom: 5px;
+      }
+    }
+
+    .card-columns-3 {
+      column-count: 1;
+
+      .card {
+        margin-bottom: 5px;
+      }
+    }
+
+    .card-columns-4 {
+      column-count: 2;
+
+      .card {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .container {
+    .card-columns-1 {
+      column-count: 1;
+    }
+
+    .card-columns-2 {
+      column-count: 2;
+    }
+
+    .card-columns-3 {
+      column-count: 3;
+    }
+
+    .card-columns-4 {
       column-count: 4;
     }
   }

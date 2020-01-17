@@ -1,0 +1,58 @@
+#faq {
+  .faq-card-topic {
+    width: 100%;
+    @include media-breakpoint-up(md){
+      width: 45%;
+    }
+    @include media-breakpoint-up(lg){
+      width: 30%;
+    }
+  }
+
+  input[type=search] {
+    background-color: $gray;
+    padding-left: 50px;
+    height: 60px;
+    font-size: $font-size-xmd;
+  }
+
+  .search-icon {
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+  }
+
+  #accordion {
+    .collapse {
+      border-top: 1px solid $blue;
+    }
+    button {
+      color: $blue;
+      font-size: $font-size-xmd;
+      line-height: 25px;
+      z-index: 1;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    .remove {
+      display: none;
+    }    
+    .search-icon {
+      left: auto;
+      right: 10px;
+      cursor: pointer;
+      z-index: 0;      
+    }
+    h5[aria-expanded=true] {
+      .remove {
+        display: block !important;
+      }  
+      .search-icon {
+        display: none;
+      }
+    }
+  }
+}

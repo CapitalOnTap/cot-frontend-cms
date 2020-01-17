@@ -67,4 +67,3 @@ AOS.init()
 
 // https://daneden.github.io/animate.css/
 import '../node_modules/animate.css/animate.min.css';
-

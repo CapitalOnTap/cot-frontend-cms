@@ -55,34 +55,36 @@ class COTOdometer {
   }
 
   init(){
-    window.addEventListener('load', () => {
+    if (this.odometerEl) {
+      window.addEventListener('load', () => {
 
-      if (this.shouldResetOdometer()) {
-        this.resetOdometer();
-      }
-
-      this.odometerEl.innerHTML = this.get(this.storageKey) || this.counter;
-
-      setInterval(() => {
-        const valSet = this.get(this.storageSetKey);
-
-        if (valSet == this.counter) {
-          
-          if (!this.get(this.storageKey)) {
-            this.add(this.storageKey, this.counter);
-          } else {
-            const currentIncrementVal = this.get(this.storageKey);
-            const incrementVal = parseInt(currentIncrementVal) + parseInt(this.kk);
-            this.odometerEl.innerHTML = incrementVal;
-            this.add(this.storageKey, incrementVal);
-          }
-        } else {
-          this.add(this.storageSetKey, this.counter);
-          this.add(this.storageKey, this.counter);
+        if (this.shouldResetOdometer()) {
+          this.resetOdometer();
         }
-      }, 3000);
 
-    })
+        this.odometerEl.innerHTML = this.get(this.storageKey) || this.counter;
+
+        setInterval(() => {
+          const valSet = this.get(this.storageSetKey);
+
+          if (valSet == this.counter) {
+            
+            if (!this.get(this.storageKey)) {
+              this.add(this.storageKey, this.counter);
+            } else {
+              const currentIncrementVal = this.get(this.storageKey);
+              const incrementVal = parseInt(currentIncrementVal) + parseInt(this.kk);
+              this.odometerEl.innerHTML = incrementVal;
+              this.add(this.storageKey, incrementVal);
+            }
+          } else {
+            this.add(this.storageSetKey, this.counter);
+            this.add(this.storageKey, this.counter);
+          }
+        }, 3000);
+
+      })
+    }
   }
 }
 
