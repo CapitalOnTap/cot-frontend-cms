@@ -9,7 +9,7 @@
     }
   }
 
-  input[type=search] {
+  #faq-search {
     background-color: $gray;
     padding-left: 50px;
     height: 60px;
@@ -23,7 +23,37 @@
     left: 10px;
   }
 
-  #accordion {
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color-primary;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $color-primary;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $color-primary;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $color-primary;
+  }
+
+  .close-icon {
+    display: none;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .form-group.active {
+    .close-icon{
+      display: block;
+    }
+  }
+
+
+  #accordion, 
+  #accordion-results {
     .collapse {
       border-top: 1px solid $blue;
     }
@@ -45,13 +75,19 @@
       right: 20px;
       cursor: pointer;
       z-index: 0;      
-    }
+    }    
     h5[aria-expanded=true] {
       .remove {
         display: block !important;
       }  
       .search-icon {
         display: none;
+      }
+    }
+    .card-title{
+      font-size: $font-size-xmd;
+      @include media-breakpoint-up(md){
+        font-size: $font-size-md;
       }
     }
   }

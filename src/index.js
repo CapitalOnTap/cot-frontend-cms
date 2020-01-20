@@ -13,6 +13,11 @@ import 'bootstrap/js/dist/collapse.js';
 // JS - Add js class to html
 document.querySelector('html.no-js').className = 'js';
 
+//Component - FAQ Search
+import FAQSearch from './components/faq/faq-search';
+const faq = new FAQSearch();
+faq.init();
+
 // Component - Navigation menu button
 import Navigation from './components/nav/nav';
 const nav = new Navigation();
