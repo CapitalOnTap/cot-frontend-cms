@@ -71,7 +71,7 @@ class FAQSearch {
     }
 
     if(this.emptySearch) {
-      document.addEventListener('click', () => {
+      this.emptySearch.addEventListener('click', () => {
         this.searchInput.value = ""
         this.search()
       })

@@ -51,6 +51,15 @@
     }
   }
 
+  .card-body {
+    a {
+      &:focus,
+      &:active{
+        outline: none;
+      }
+    }
+  }
+
 
   #accordion, 
   #accordion-results {
