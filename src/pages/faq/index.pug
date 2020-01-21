@@ -22,7 +22,7 @@ block body
                     span See all answers
                     span.mi.mi-arrow-forward.ml-1
     section(class="container-fluid")
-      div.container.px-0.pb-3.pb-lg-5
+      div.container.px-0
         div(class="form-group position-relative mx-0 mx-md-2 mb-0")
           img(data-src="/img/icons/search-icon.svg" class='img-fluid search-icon position-absolute' alt='Capital On Tap')
           input(id="faq-search" type="text" class="form-control border-0" placeholder="What can we help with?")
@@ -33,25 +33,26 @@ block body
         div#accordion
           block body
             each item, index in faqTopics
-              h3(id=item.link class="card-title mb-4")= item.text1
-              div(class="mb-5")
-                div(class="card mb-3 shadow border-0")
-                  div(class="card-header border-0 pr-5 position-relative bg-white" id="headingOne")
-                    h5(class="mb-0" role="button" data-toggle="collapse" data-target=`#${item.link + index}` aria-expanded="false" aria-controls=`${item.link + index}`)
-                      button(class="btn btn-link p-0 text-left w-100 position-relative") Will applying with COT affect my credit rating?
-                      img(data-src="/img/icons/add-icon.svg" class='img-fluid search-icon position-absolute' alt='Capital On Tap')
-                      img(data-src="/img/icons/remove-icon.svg" class='img-fluid remove search-icon position-absolute' alt='Capital On Tap')
-                  div(id=`${item.link + index}` class="collapse mx-4" aria-labelledby="headingOne" data-parent="#accordion")
-                    div(class="card-body px-0") Our 1 page application will ask for business and basic personal information. If you are a limited company please have your registered number to hand. Once you’re signed up, our business compliance team will check that your business complies with regulatory requirements and if all conditions are met we will send you your Visa Card to access your funds. In some circumstances we may require further information on your business such as business trading activity or the names and address of the additional business owners; we will contact you within 1 business day via email if this is the case and inform you of any requirements in order to complete your application.
-                div(class="card mb-3 shadow border-0")
-                  div(class="card-header border-0 pr-5 position-relative bg-white" id="headingTwo")
-                    h5(class="mb-0" role="button" data-toggle="collapse" data-target=`#${item.link + index}1` aria-expanded="false" aria-controls=`${item.link + index}1`)
-                      button(class="btn btn-link p-0 text-left w-100 position-relative") What happens when my card arrives?
-                      img(data-src="/img/icons/add-icon.svg" class='img-fluid search-icon position-absolute' alt='Capital On Tap')
-                      img(data-src="/img/icons/remove-icon.svg" class='img-fluid remove search-icon position-absolute' alt='Capital On Tap')
-                  div(id=`${item.link + index}1` class="collapse mx-4" aria-labelledby="headingTwo" data-parent="#accordion")
-                    div(class="card-body px-0") Our 1 page application will ask for business and basic personal information. If you are a limited company please have your registered number to hand. Once you’re signed up, our business compliance team will check that your business complies with regulatory requirements and if all conditions are met we will send you your Visa Card to access your funds. In some circumstances we may require further information on your business such as business trading activity or the names and address of the additional business owners; we will contact you within 1 business day via email if this is the case and inform you of any requirements in order to complete your application.
-        div#accordion-results
+              h3(id=item.link class="card-title mb-4 mt-4 mt-lg-5")= item.text1
+              div(class="card mb-3 shadow border-0")
+                div(class="card-header border-0 pr-5 position-relative bg-white" id="headingOne")
+                  h5(class="mb-0" role="button" data-toggle="collapse" data-target=`#item-${index}` aria-expanded="false" aria-controls=`item-${index}`)
+                    button(class="btn btn-link p-0 text-left w-100 position-relative") Will applying with COT affect my credit rating?
+                    img(data-src="/img/icons/add-icon.svg" class='img-fluid search-icon position-absolute' alt='Capital On Tap')
+                    img(data-src="/img/icons/remove-icon.svg" class='img-fluid remove search-icon position-absolute' alt='Capital On Tap')
+                div(id=`item-${index}` class="collapse mx-4" aria-labelledby="headingOne" data-parent="#accordion")
+                  div(class="card-body px-0") Our 1 page application will ask for business and basic personal information. If you are a limited company please have your registered number to hand. Once you’re signed up, our business compliance team will check that your business complies with regulatory requirements and if all conditions are met we will send you your Visa Card to access your funds. In some circumstances we may require further information on your business such as business trading activity or the names and address of the additional business owners; we will contact you within 1 business day via email if this is the case and inform you of any requirements in order to complete your application.
+              div(class="card mb-3 shadow border-0")
+                div(class="card-header border-0 pr-5 position-relative bg-white" id="headingTwo")
+                  h5(class="mb-0" role="button" data-toggle="collapse" data-target=`#item-${index}-1` aria-expanded="false" aria-controls=`item-${index}-1`)
+                    button(class="btn btn-link p-0 text-left w-100 position-relative") What happens when my card arrives?
+                    img(data-src="/img/icons/add-icon.svg" class='img-fluid search-icon position-absolute' alt='Capital On Tap')
+                    img(data-src="/img/icons/remove-icon.svg" class='img-fluid remove search-icon position-absolute' alt='Capital On Tap')
+                div(id=`item-${index}-1` class="collapse mx-4" aria-labelledby="headingTwo" data-parent="#accordion")
+                  div(class="card-body px-0") Our 1 page application will ask for business and basic personal information. If you are a limited company please have your registered number to hand. Once you’re signed up, our business compliance team will check that your business complies with regulatory requirements and if all conditions are met we will send you your Visa Card to access your funds. In some circumstances we may require further information on your business such as business trading activity or the names and address of the additional business owners; we will contact you within 1 business day via email if this is the case and inform you of any requirements in order to complete your application.
+        
+        div#accordion-results.mt-4
+
     section(class="container-fluid bg-info py-5 px-0 text-center")
       div.container
         h2.card-title.mb-2 Can't find your answer? 

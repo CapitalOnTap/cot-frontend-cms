@@ -1,4 +1,4 @@
-mixin ImageAndTextCTA(title, desc, src, bgColour='bg-light', animationDelay='300', order='', btn=false)
+mixin ImageAndTextCTA(title, desc, src, bgColour='bg-light', animationDelay='300', order='', btn=false, mobileIcons=false)
   section(class="bg-info px-2 pt-5 pb-0 container-fluid" class=bgColour)
     div(class="container")
       div.row
@@ -11,3 +11,7 @@ mixin ImageAndTextCTA(title, desc, src, bgColour='bg-light', animationDelay='300
             if btn
               div
                 a( href="#" class="btn btn-secondary text-white font-weight-bold m-auto m-lg-0") FIND OUT MORE
+            if mobileIcons
+              div.my-2
+                img(data-src="/img/app-store.svg" class='img-fluid mb-2 mb-md-0 mr-0 mr-md-4' alt='App Store')
+                img(data-src="/img/google-play.svg" class='img-fluid' alt='Google Play')

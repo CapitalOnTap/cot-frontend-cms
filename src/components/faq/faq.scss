@@ -61,43 +61,51 @@
   }
 
 
-  #accordion, 
-  #accordion-results {
-    .collapse {
-      border-top: 1px solid $blue;
+}
+
+#accordion, 
+#accordion-results {
+  .collapse {
+    border-top: 1px solid $blue;
+  }
+
+  button {
+    color: $blue;
+    font-size: $font-size-xmd;
+    line-height: 25px;
+    z-index: 1;
+    &:hover,
+    &:focus {
+      text-decoration: none;
     }
-    button {
-      color: $blue;
-      font-size: $font-size-xmd;
-      line-height: 25px;
-      z-index: 1;
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
+  }
+
+  .remove {
+    display: none;
+  }
+
+  .search-icon {
+    left: auto;
+    right: 20px;
+    cursor: pointer;
+    z-index: 0;      
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  h5[aria-expanded=true] {
     .remove {
-      display: none;
-    }    
+      display: block !important;
+    }  
     .search-icon {
-      left: auto;
-      right: 20px;
-      cursor: pointer;
-      z-index: 0;      
-    }    
-    h5[aria-expanded=true] {
-      .remove {
-        display: block !important;
-      }  
-      .search-icon {
-        display: none;
-      }
+      display: none;
     }
-    .card-title{
-      font-size: $font-size-xmd;
-      @include media-breakpoint-up(md){
-        font-size: $font-size-md;
-      }
+  }
+  
+  .card-title{
+    font-size: $font-size-xmd;
+    @include media-breakpoint-up(md){
+      font-size: $font-size-md;
     }
   }
 }

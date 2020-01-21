@@ -1,0 +1,23 @@
+#rewards {
+  .divider {
+    background-color: $blue;
+  }
+
+  .rewards-list {
+    padding-top: .25rem;
+  }
+
+  .rewards-banner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .reward-img {
+    margin: 0 auto;
+    max-width: 100%;
+    @include media-breakpoint-up(md){
+      max-width: max-content;    
+    }
+  }
+}

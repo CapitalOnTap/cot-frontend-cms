@@ -1,0 +1,175 @@
+extends ../../pages-template/layout.pug
+include ../../content/CTAMixins.pug
+
+block headTitle
+    title Best Rewards Credit Cards with Avios and Cashback | Capital on Tap
+
+block body
+  main#rewards.pt-6.pt-md-8.bg-light
+    section(class="rewards-banner img-fluid container-fluid lazy d-flex flex-column justify-content-center" data-bg="url(/img/rewards-bg.jpg)")
+      div.container.px-0.py-3.py-lg-5.d-flex.justify-content-center.flex-column
+        div.text-center
+          h1 Credit cards built for small businesses
+          p Borrow up to #[strong £50,000] to grow your business. Instant access to funds.
+      section(class="container text-center")
+          div.container.px-0.pb-3.pb-lg-5
+            div.d-flex.justify-content-center.flex-column-reverse.flex-lg-row
+
+              div.card.shadow.border-0.mx-0.mx-md-2.mb-4
+                div.d-flex.flex-column.flex-md-row
+                  div.card-body.col-12.col-md-8.d-flex.flex-column.justify-content-between
+                    h5.card-title.mb-2.d-md-none Business Credit Card
+                    img(data-src="/img/cot-visa.png" class='reward-img img-fluid mb-1' alt='Capital On Tap')
+                    a(class="d-sm-block d-md-none d-lg-block w-100 text-uppercase btn btn-warning btn-sm font-weight-bold py-1 m-auto m-lg-0" href="#") Sign up for free
+                    small.d-md-none.mt-2 *Applying for a card will not affect your credit scor
+                  div.card-body.col-12.col-md-6.col-lg-4.d-none.d-md-flex.flex-column.justify-content-between.px-1
+                    h5.card-title.mb-1 Business Credit Card
+                    a(class="d-block d-lg-none w-100 text-uppercase btn btn-warning btn-sm font-weight-bold py-1 m-auto mb-md-2 m-lg-0" href="#") Sign up for free
+                    small *Applying for a card will not affect your credit score
+                div.divider.m-2
+                ul.list-inline.text-left.px-2
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/crossed-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span.crossed-line #[strong Earn 1 point for every £1 of card spend]
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/crossed-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span.crossed-line #[strong Redeem 1 point for 1p (1% cashback) or 1 Avios]
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/crossed-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span.crossed-line #[strong 10,000 bonus points that you can redeem for £100 cashback or 10,000 Avios**] #[br] when you spend £5,000 on your card in your first 3 months
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/tick-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span Credit facility of up to £50K
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/tick-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span Up to 56 days interest free on card purchases
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/tick-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span No charges on FX, ATM
+                  li.d-flex.align-items-start
+                    img(data-src="/img/icons/tick-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span Up to 10 free supplementary cards
+                div.divider.m-2
+                h3.py-4.mb-2 Free
+
+              div.card.shadow.border-0.mx-0.mx-md-2.mb-4
+                div.d-flex.flex-column.flex-md-row
+                  div.card-body.col-12.col-md-6.col-lg-8.d-flex.flex-column.justify-content-between
+                    h5.card-title.mb-2.d-md-none Business Rewards Card
+                    img(data-src="/img/cot-visa-navy.png" class='reward-img img-fluid mb-1' alt='Capital On Tap')
+                    p.blue.mb-2.d-md-none 1% cashback or 1 Avios for every £1 of card spend
+                    a(class="d-sm-block d-md-none d-lg-block w-100 text-uppercase btn btn-warning btn-sm font-weight-bold py-1 m-auto m-lg-0 " href="#") Get business rewards
+                    small.d-md-none.mt-2 *Applying for a card will not affect your credit score
+                  div.card-body.col-12.col-md-6.col-lg-4.d-none.d-md-flex.flex-column.justify-content-between.px-1
+                    h5.card-title.mb-1 Business Rewards Card
+                    p.blue 1% cashback or #[br] 1 Avios for every £1 of card spend
+                    a(class="d-block d-lg-none w-100 text-uppercase btn btn-warning btn-sm font-weight-bold py-1 m-auto mb-md-2 m-lg-0" href="#") Get business rewards
+                    small *Applying for a card will not affect your credit score
+                div.divider.m-2
+                ul.list-inline.text-left.px-2
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/tick-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span #[strong Earn 1 point for every £1 of card spend]
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/tick-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span #[strong Redeem 1 point for 1p (1% cashback) or 1 Avios]
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/tick-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span #[strong 10,000 bonus points that you can redeem for £100 cashback or 10,000 Avios**] #[br] when you spend £5,000 on your card in your first 3 months
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/tick-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span Credit facility of up to £50K
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/tick-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span Up to 56 days interest free on card purchases
+                  li.mb-4.d-flex.align-items-start
+                    img(data-src="/img/icons/tick-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span No charges on FX, ATM
+                  li.d-flex.align-items-start
+                    img(data-src="/img/icons/tick-icon.svg" class='rewards-list img-fluid mr-1' alt='Capital On Tap') 
+                    span Up to 10 free supplementary cards
+                div.divider.m-2
+                h3.py-4.mb-2 £99 #[small /year]
+            
+            small **The bonus points offer is only applicable to customers for whom this is their first rewards card with Capital on Tap.
+
+    section(class="bg-info container-fluid py-4 py-md-5")
+      div.container.d-flex.flex-column.flex-md-row
+        div.col-12.col-md-6.p-0.p-md-2.d-flex.flex-column.justify-content-center.mb-5.mb-md-0.text-center.text-md-left
+          h2.mb-2 What is Rewards Club?
+          p You earn 1 point for every £1 of card spend which you can redeem for cashback or Avios.
+          p Avios is the reward currency of the British Airways Executive Club. You can collect Avios on flights, hotels, shopping and car rental with us or one of our many partners. With so many ways to collect you'll soon have enough to spend on all of the travel things you love, including reward flights and cabin upgrades.
+          a(class="d-inline-flex justify-content-center justify-content-md-start blue" href="#")
+            span See more ways to spend your Avios and for T&Cs
+            span.mi.mi-arrow-forward.ml-1
+        div.col-12.col-md-6.text-center.p-0.p-md-2
+          img(data-src="/img/rewards-travel.jpg" class='w-100 img-fluid mb-1' alt='Capital On Tap')
+    
+    section(class="container-fluid py-2 py-md-5 text-left")
+      div.container
+        div.text-center.mb-5
+          h2.mb-2 Find out more about Capital on Tap business credit cards
+          p Everything you need to know about our cards
+        div#accordion          
+          div(class="card mb-3 shadow border-0")
+            div(class="card-header border-0 pr-5 position-relative bg-white" id="headingOne")
+              h5(class="mb-0" role="button" data-toggle="collapse" data-target=`#item-1` aria-expanded="false" aria-controls=`item-1`)
+                button(class="btn btn-link p-0 text-left w-100 position-relative") What is Capital on Tap business credit card?
+                img(data-src="/img/icons/add-icon.svg" class='img-fluid search-icon position-absolute' alt='Capital On Tap')
+                img(data-src="/img/icons/remove-icon.svg" class='img-fluid remove search-icon position-absolute' alt='Capital On Tap')
+            div(id=`item-1` class="collapse mx-4" aria-labelledby="headingOne" data-parent="#accordion")
+              div(class="card-body px-0") 
+                p #[strong No fees] – our standard card comes with no monthly, annual or set-up fees. If you opt in our Rewards card, you will be charged only £99. We also don’t charge for UK ATM withdrawals or foreign transactions fees. You also have up to 56 interest-free days. 
+                p #[strong Premium account]  – you can upgrade to a premium account at any time. For a small annual fee of £99, you can earn points on every £1 spent and redeem for 1 Avios and 1% cashback. If you spend £5000 in the first 3 months, you will receive 20,000 bonus points. 
+                p #[strong Supplementary cards] – depending on the card option you choose, you can get up to 20 supplementary cards for your employees and partners. You can set a credit limit for each card and freeze them anytime.
+          div(class="card mb-3 shadow border-0")
+            div(class="card-header border-0 pr-5 position-relative bg-white" id="headingTwo")
+              h5(class="mb-0" role="button" data-toggle="collapse" data-target=`#item-2` aria-expanded="false" aria-controls=`item-2`)
+                button(class="btn btn-link p-0 text-left w-100 position-relative") Key features & benefits
+                img(data-src="/img/icons/add-icon.svg" class='img-fluid search-icon position-absolute' alt='Capital On Tap')
+                img(data-src="/img/icons/remove-icon.svg" class='img-fluid remove search-icon position-absolute' alt='Capital On Tap')
+            div(id=`item-2` class="collapse mx-4" aria-labelledby="headingTwo" data-parent="#accordion")
+              div(class="card-body px-0") Our 1 page application will ask for business and basic personal information. If you are a limited company please have your registered number to hand. Once you’re signed up, our business compliance team will check that your business complies with regulatory requirements and if all conditions are met we will send you your Visa Card to access your funds. In some circumstances we may require further information on your business such as business trading activity or the names and address of the additional business owners; we will contact you within 1 business day via email if this is the case and inform you of any requirements in order to complete your application.
+          div(class="card mb-3 shadow border-0")
+            div(class="card-header border-0 pr-5 position-relative bg-white" id="headingThree")
+              h5(class="mb-0" role="button" data-toggle="collapse" data-target=`#item-3` aria-expanded="false" aria-controls=`item-3`)
+                button(class="btn btn-link p-0 text-left w-100 position-relative") Eligibility
+                img(data-src="/img/icons/add-icon.svg" class='img-fluid search-icon position-absolute' alt='Capital On Tap')
+                img(data-src="/img/icons/remove-icon.svg" class='img-fluid remove search-icon position-absolute' alt='Capital On Tap')
+            div(id=`item-3` class="collapse mx-4" aria-labelledby="headingThree" data-parent="#accordion")
+              div(class="card-body px-0") Our 1 page application will ask for business and basic personal information. If you are a limited company please have your registered number to hand. Once you’re signed up, our business compliance team will check that your business complies with regulatory requirements and if all conditions are met we will send you your Visa Card to access your funds. In some circumstances we may require further information on your business such as business trading activity or the names and address of the additional business owners; we will contact you within 1 business day via email if this is the case and inform you of any requirements in order to complete your application.
+          div(class="card mb-3 shadow border-0")
+            div(class="card-header border-0 pr-5 position-relative bg-white" id="headingFour")
+              h5(class="mb-0" role="button" data-toggle="collapse" data-target=`#item-4` aria-expanded="false" aria-controls=`item-4`)
+                button(class="btn btn-link p-0 text-left w-100 position-relative") How to apply
+                img(data-src="/img/icons/add-icon.svg" class='img-fluid search-icon position-absolute' alt='Capital On Tap')
+                img(data-src="/img/icons/remove-icon.svg" class='img-fluid remove search-icon position-absolute' alt='Capital On Tap')
+            div(id=`item-4` class="collapse mx-4" aria-labelledby="headingFour" data-parent="#accordion")
+              div(class="card-body px-0") Our 1 page application will ask for business and basic personal information. If you are a limited company please have your registered number to hand. Once you’re signed up, our business compliance team will check that your business complies with regulatory requirements and if all conditions are met we will send you your Visa Card to access your funds. In some circumstances we may require further information on your business such as business trading activity or the names and address of the additional business owners; we will contact you within 1 business day via email if this is the case and inform you of any requirements in order to complete your application.
+
+    section(class="container pb-5 text-center")
+      a(class=" text-uppercase btn btn-warning btn-sm font-weight-bold py-1 px-4 mb-2" href="#") Sign up for free
+      small.d-block *Applying for a card will not affect your credit score
+
+    +ImageAndTextCTA(
+      'Are you a sole trader?',
+      'Check out our card dedicated to self-employed. With higher limits than a personal credit card, flexible repayment options and fantastic rewards, you can grow your business today.',
+      '/img/small-business-credit-card-2.png',
+      'bg-info',
+      '300',
+      'order-1 order-lg-2',
+      true)
+    
+    include ../../components/richText/richText
+    include ../../components/trustPilot/trustPilot
+
+    +ImageAndTextCTA(
+      'Take control of your business',
+      'Download Capital on Tap on iOS or Android. Manage your funds anywhere, anytime.',
+      '/img/rewards-control.png',
+      'bg-info',
+      '300',
+      '',
+      false,
+      true)
+
