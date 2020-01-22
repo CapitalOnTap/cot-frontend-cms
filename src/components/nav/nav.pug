@@ -1,7 +1,7 @@
 nav#main-nav.navbar.navbar-light.bg-primary.justify-content-between.px-2.py-1
   div.container.flex-nowrap.position-relative
     ul.nav
-      li.nav-item.active
+      li.nav-item
         a(class='nav-link text-white' href="/small-business") Small Business
       li.nav-item
         a(class='nav-link text-white' href="/self-employed") Self Employed
@@ -16,8 +16,11 @@ nav#main-nav.navbar.navbar-light.bg-primary.justify-content-between.px-2.py-1
             a(class="dropdown-item py-1 text-primary py-1" href="#") Our Story
           li
             a(class="dropdown-item py-1 text-primary py-1" href="#") Customer Stories
+
     a( href="#" class="btn btn-light btn-sm font-weight-bold m-auto m-lg-0 d-none d-md-flex") APPLY NOW
+    
     include mobileNav
+    
     button(class="navbar-toggler p-0 border-0 position-absolute d-md-none" id="nav-button" type="button")
       div.animated-icon#animated
         span.bg-white
