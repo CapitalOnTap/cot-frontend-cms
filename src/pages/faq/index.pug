@@ -4,7 +4,7 @@ block headTitle
     title FAQ's
 
 block body
-  main#faq.pt-6.pt-md-8.bg-light
+  div#faq.bg-light
     section(class="img-fluid container-fluid d-flex justify-content-center")
       div.container.px-0.py-3.py-lg-5.d-flex.justify-content-center.flex-column
         div.text-center
@@ -17,7 +17,7 @@ block body
               div.faq-card-topic.card.shadow.border-0.mx-0.mx-md-2.mb-4
                 div.card-body
                   img(data-src=item.src class='img-fluid mb-1' alt='Capital On Tap')
-                  h5.card-title.mb-1= item.text1
+                  h3.card-title.mb-1= item.text1
                   a(class="d-inline-flex justify-content-center blue" href=`#${item.link}`)
                     span See all answers
                     span.mi.mi-arrow-forward.ml-1
@@ -33,7 +33,7 @@ block body
         div#accordion
           block body
             each item, index in faqTopics
-              h3(id=item.link class="card-title mb-4 mt-4 mt-lg-5")= item.text1
+              h2(id=item.link class="card-title mb-4 mt-4 mt-lg-5")= item.text1
               div(class="card mb-3 shadow border-0")
                 div(class="card-header border-0 pr-5 position-relative bg-white" id="headingOne")
                   h5(class="mb-0" role="button" data-toggle="collapse" data-target=`#item-${index}` aria-expanded="false" aria-controls=`item-${index}`)

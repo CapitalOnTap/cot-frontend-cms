@@ -13,7 +13,7 @@
     background-color: $gray;
     padding-left: 50px;
     height: 60px;
-    font-size: $font-size-xmd;
+    font-size: $h3-font-size;
   }
 
   .search-icon {
@@ -61,6 +61,24 @@
   }
 
 
+  #accordion, 
+  #accordion-results {
+    .collapse {
+      border-top: 1px solid $blue;
+    }
+    button {
+      color: $blue;
+      font-size: $h3-font-size;
+      line-height: 25px;
+      z-index: 1;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+
 }
 
 #accordion, 
@@ -71,7 +89,7 @@
 
   button {
     color: $blue;
-    font-size: $font-size-xmd;
+    font-size: $h3-font-size;
     line-height: 25px;
     z-index: 1;
     &:hover,
@@ -103,9 +121,6 @@
   }
   
   .card-title{
-    font-size: $font-size-xmd;
-    @include media-breakpoint-up(md){
-      font-size: $font-size-md;
-    }
+    font-size: $h3-font-size;    
   }
 }

@@ -1,15 +1,11 @@
 #top-nav {
   ul.nav{
-      li{
-        font-size: $font-size-sm;
-          &:last-child{
-              a{
-                  padding-right: 0;
-              }
-          }
+    li{
+      &:last-child{
+        a{
+            padding-right: 0;
+        }
       }
-      button{
-        font-size: $font-size-sm;
-      }
+    }      
   }
 }

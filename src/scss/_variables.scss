@@ -1,3 +1,12 @@
+// HTML Element to have the root font-size to manipulate responsive sizes
+html {
+  font-size: 16px;
+  
+  @media screen and (max-width: 700px) {
+    font-size: 15px;    
+  }
+}
+
 // Theming Bootstrap Variable defaults https://getbootstrap.com/docs/4.3/getting-started/theming/
 $theme-colors: (
   "primary": #263355,
@@ -24,17 +33,21 @@ $body-color: #263355;
 $font-family-base: "Lato", sans-serif;
 $headings-font-weight: bold;
 $border-width: 2px;
-$font-size-sm: .875rem;
-$font-size-xlg: 2.5rem;
-$font-size-md: 1.5rem;
-$font-size-xmd: 1.25rem;
 $btn-padding-y: .7rem;
 $btn-padding-x: 2rem;
-// $enable-responsive-font-sizes: true;
+$enable-responsive-font-sizes: true;
 
 //Font sizes
-$h1-font-size: 2rem;
-$h2-font-size: 1.875rem;
+$h1-font-size: 3rem; //48px
+$h2-font-size: 1.875rem; //30px
+$h3-font-size: 1.375rem; //22px
+
+$font-size-base: 1.125rem; //18px
+$font-size-lg: 1.125rem; //18px
+$font-size-md: 1rem; //16px
+$font-size-sm: 0.875rem; //14px
+$font-size-xsm: 0.75rem; //12px
+
 
 $color-primary: #263355;
 $white: #ffffff;

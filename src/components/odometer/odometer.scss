@@ -1,7 +1,7 @@
 section#odometer{
   background-color: $gray;
   .odometer {
-    font-size: $font-size-xlg;
+    font-size: 2.25rem;
     background: transparent;
     padding: 0 .15rem;
   }
@@ -15,11 +15,11 @@ section#odometer{
     color: $blue;
   }
   .odometer-digit {
-    height: 30px;
-    line-height: 30px;    
+    height: 45px;
+    line-height: 45px;    
     display: inline-block;
     vertical-align: bottom;
-    font-size: $font-size-md;
+    font-size: $h2-font-size;
     box-shadow: none;
     padding: 2px;
     margin: 0 2px;
@@ -28,7 +28,7 @@ section#odometer{
     color: $white;
     @include media-breakpoint-up(sm){
       padding: 2px 5px;
-      font-size: $font-size-xlg;
+      font-size: 2.25rem;
       height: 56px;
       line-height: 58px;
     }

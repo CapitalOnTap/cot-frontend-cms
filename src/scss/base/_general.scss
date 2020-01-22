@@ -54,3 +54,11 @@
   text-decoration: line-through;
   color: #696D7E;
 }
+
+main, 
+footer {
+  small,
+  .small {
+    font-size: $font-size-xsm;
+  }
+}

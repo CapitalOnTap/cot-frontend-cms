@@ -5,7 +5,6 @@ block headTitle
     title #{about.pageTitle} - #{common.pageTitle}
 
 block body
-  main#about.pt-8
-    div.container-fluid
-      div.row
-        +heroFullWidthBanner("self-employed", "url(/img/self-employed-banner.png)", "Simple funding for sole traders & freelancers", "text-white")
+  div#about.container-fluid
+    div.row
+      +heroFullWidthBanner("self-employed", "url(/img/self-employed-banner.png)", "Simple funding for sole traders & freelancers", "text-white")

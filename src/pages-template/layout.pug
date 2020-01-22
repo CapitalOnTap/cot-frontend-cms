@@ -2,7 +2,7 @@ extends ../content/content.pug
 
 block content
     doctype html
-    html(class='no-js' lang='en')
+    html(lang='en')
         head
             meta(charset='utf-8')
             meta(name='viewport',content='width=device-width, initial-scale=1')
@@ -13,7 +13,9 @@ block content
 
         body#body.bootstrap-iso
           include ../components/header/header
-
-          block body
+          
+          main#home.pt-6
+          
+            block body
 
           include ../components/footer/footer

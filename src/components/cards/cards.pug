@@ -1,10 +1,11 @@
 section(class="container-fluid bg-warning py-5 px-0 text-center")
   div.container
-    div.card-columns
+    div.card-columns-4
       block body
         each item in cards
-          div.card.shadow.border-0
-            div.card-body
-              img(data-src=item.src class='img-fluid mb-1' alt='Capital On Tap')
-              h6.card-title.mb-1.pt-2.border-top.border-info= item.text1
-              h6.card-title= item.text2
+          div.card.shadow.border-0.mb-2
+            div.card-body.font-weight-bold.px-2
+              img(data-src=item.src class='img-fluid mb-2' alt='Capital On Tap')
+              div.pt-2.border-top.border-info
+                p.card-title.m-0= item.text1
+                p.card-title.m-0= item.text2
