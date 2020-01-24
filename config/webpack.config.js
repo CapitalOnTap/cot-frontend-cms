@@ -87,92 +87,92 @@ module.exports = (env) => {
                 {
                   test: /\.tsx?$/,
                   use: 'ts-loader',
+                  exclude: /node_modules/                  
+                },
+                {
+                  loader: 'babel-loader',
+                  test: /\.js$/,
                   exclude: /node_modules/,
+                  query: {
+                    presets: ['@babel/react', '@babel/preset-env']                    
+                  }
                 },
                 {
-                    loader: 'babel-loader',
-                    test: /\.js$/,
-                    exclude: /node_modules/,
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                },
-                {
-                    test: /\.s?css$/,
-                    use: [
-                        {
-                            loader: MiniCssExtractPlugin.loader,
-                            options: {
-                                hmr: process.env.NODE_ENV === 'development',
-                            },
-                        },
+                  test: /\.s?css$/,
+                  use: [
+                    {
+                      loader: MiniCssExtractPlugin.loader,
+                      options: {
+                          hmr: process.env.NODE_ENV === 'development',
+                      },
+                    },
 
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                sourceMap: true
-                            }
-                        },
-                        {
-                            loader: 'postcss-loader',
-                            options: {
-                                config: { path: './config/postcss.config.js' },
-                                sourceMap: true
-                            }
-                        },
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                sourceMap: true,
-                                prependData: setup.paths.sassFile,
-                                sassOptions: {
-                                    includePaths: [
-                                        path.join(__dirname, setup.paths.src)
-                                    ]
-                                }
-                            }
-                        }
-                    ]
-                },
-                {
-                    test: /\.(jpg|png)$/,
-                    use: {
-                        loader: "url-loader",
-                        options: {
-                            limit: 25000,
-                        },
+                    {
+                      loader: 'css-loader',
+                      options: {
+                          sourceMap: true
+                      }
                     },
-                },
-                {
-                    test: /\.(woff|woff2)$/,
-                    use: {
-                        loader: "file-loader",
-                        options: {
-                            outputPath: setup.paths.fontsDist,
-                            publicPath: setup.paths.fontsFolder
-                        },
+                    {
+                      loader: 'postcss-loader',
+                      options: {
+                          config: { path: './config/postcss.config.js' },
+                          sourceMap: true
+                      }
                     },
-                },
-                {
-                    test: /\.svg$/,
-                    use: "file-loader",
-                },
-                {
-                    test: /\.pug$/,
-                    loader: 'pug-loader',
-                    query: {
-                        pretty: true
+                    {
+                      loader: 'sass-loader',
+                      options: {
+                          sourceMap: true,
+                          prependData: setup.paths.sassFile,
+                          sassOptions: {
+                              includePaths: [
+                                  path.join(__dirname, setup.paths.src)
+                              ]
+                          }
+                      }
                     }
+                  ]
                 },
                 {
-                    test: /\.(html)$/,
-                    use: {
-                        loader: 'html-loader',
-                        options: {
-                            interpolate: true,
-                            attrs: false
-                        }
-                    }
+                  test: /\.(jpg|png)$/,
+                  use: {
+                    loader: "url-loader",
+                    options: {
+                        limit: 25000,
+                    },
+                  },
+                },
+                {
+                  test: /\.(woff|woff2)$/,
+                  use: {
+                    loader: "file-loader",
+                    options: {
+                        outputPath: setup.paths.fontsDist,
+                        publicPath: setup.paths.fontsFolder
+                    },
+                  },
+                },
+                {
+                  test: /\.svg$/,
+                  use: "file-loader",
+                },
+                {
+                  test: /\.pug$/,
+                  loader: 'pug-loader',
+                  query: {
+                      pretty: true
+                  }
+                },
+                {
+                  test: /\.(html)$/,
+                  use: {
+                      loader: 'html-loader',
+                      options: {
+                          interpolate: true,
+                          attrs: false
+                      }
+                  }
                 }
             ]
         },

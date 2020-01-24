@@ -6,8 +6,8 @@ import 'bootstrap/js/dist/collapse.js';
 
 //Component - FAQ Search
 import FAQSearch from './components/faq/faq-search';
-const faq = new FAQSearch();
-faq.init();
+// const faq = new FAQSearch();
+// faq.init();
 
 // Component - Navigation menu button
 import Navigation from './components/nav/nav';

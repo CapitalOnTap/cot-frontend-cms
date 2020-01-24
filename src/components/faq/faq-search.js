@@ -1,85 +1,124 @@
-// import axios from 'axios';
+import axios from 'axios';
 import faqConfig from './faqConfig';
+import React, { useState, useEffect } from 'react';
+import ReactHtmlParser from 'react-html-parser';
+import ReactDOM from 'react-dom';
 
-class FAQSearch {
-  constructor() {
-    this.searchInput = document.getElementById('faq-search');
-    this.accordion = document.getElementById('accordion');
-    this.accordionResults = document.getElementById('accordion-results');    
-    this.emptySearch = document.getElementById('empty-search');    
+
+function FAQs({searchIcon}) {  
+  const [ isActive, setActive ] = useState(false)
+
+  const [ searchTerm, setSearchTerm ] = useState("");
+  const handleSearchChange = event => {
+    setSearchTerm(event.target.value)
+    event.target.value ? setActive(true) : setActive(false)
   }
+  
+  const [ faqData, setFaqData ] = useState({});
+  async function fetchData() {
+    
+    const res = await fetch('/umbraco/surface/faq/search?lang=en&q=');
 
-  search() {
-    const val = this.searchInput.value
+    res
+      .json()
+      .then(res => {
 
-    if(val) {
-      // axios.get('/faq.json')
-      //   .then(response => {
-      //     console.log(response)
-      //   })
-      //   .catch(error => {
-      //     console.log(error)
-      //   })      
-      this.accordion.style = "display: none;";
-      this.searchInput.parentElement.classList.add("active");
-      this.accordionResults.style = "display: block;";
-      const results = faqConfig.filter(item => {
-        return item.question.includes(val.toLowerCase()) || item.answer.includes(val.toLowerCase())
+        const results = res.reduce((acc, faq) => {
+          acc[faq.category] = acc[faq.category] || [];
+          acc[faq.category].push(faq);
+          return acc;      
+        },[])
+
+        setFaqData(results)
       })
-
-      return this.template(results)
-    } else {
-      this.accordion.style = "display: block;";
-      this.searchInput.parentElement.classList.remove("active");
-      this.accordionResults.style = "display: none;";
-    }
+      .catch(err => console.log(err))
   }
 
-  template(results) {
-    this.accordionResults.innerHTML = "";
-
-    if (results.length > 0) {
-
-      return results.map((item, idx) => {
-        this.accordionResults.innerHTML += `
-          <div class="card my-3 shadow border-0">
-            <div class="card-header border-0 pr-5 position-relative bg-white" id="question-${item.id}">
-              <h5 class="mb-0" role="button" data-toggle="collapse" data-target="#question-${item.id}-${idx}" aria-expanded="false" aria-controls="question-${item.id}-${idx}">
-                <button class="btn btn-link p-0 text-left w-100 position-relative">${item.question}</button>
-                <img class="img-fluid search-icon position-absolute loaded" src="/img/icons/add-icon.svg" alt="Capital On Tap">
-                <img class="img-fluid remove search-icon position-absolute loaded" src="/img/icons/remove-icon.svg" alt="Capital On Tap">
-              </h5>
-            </div>
-            <div class="collapse mx-4" id="question-${item.id}-${idx}" aria-labelledby="question-${item.id}" data-parent="#accordion-results">
-              <div class="card-body px-0">${item.answer}</div>
-            </div>
+  useEffect(() => {
+    fetchData()
+  },[])
+  
+  const filterResults = !searchTerm
+    ? faqData
+    : Object.values(faqData).flat()
+    .filter(item => item.questionText.toLowerCase().includes(searchTerm.toLowerCase()) || item.answerCopy.toLowerCase().includes(searchTerm.toLowerCase()) )
+    .reduce((acc, faq) => {
+      acc[faq.category] = acc[faq.category] || [];
+      acc[faq.category].push(faq);
+      return acc;      
+    },[])
+    
+  return (
+    <>
+      <section className="container-fluid">
+        <div className="container px-0">
+          <div className={` ${isActive ? 'active' : ''} form-group position-relative mx-0 mx-md-2 mb-0`}>
+            {searchIcon && (
+              <img 
+                data-src={searchIcon} 
+                className='img-fluid search-icon position-absolute' 
+                alt='Capital On Tap' 
+              />
+            )}
+            <input 
+              id="faq-search" 
+              type="text" 
+              className="form-control border-0"
+              placeholder="What can we help with?"
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+            <img 
+              id="clear" 
+              data-src="/assets/dist/img/icons/close-icon.svg" 
+              className='img-fluid close-icon position-absolute' 
+              alt='Capital On Tap'
+              onClick={() => setSearchTerm("")}
+            />
           </div>
-        `;
-      }) 
+        </div>
+      </section>
 
-    } else {
-      this.accordionResults.innerHTML = `<div class="mt-3"><h4>No results found.</h4><a class="blue" href="#">Ask our customer team online</a></div>`;
-    }
+      <section className="container-fluid pb-5 px-0 text-left">
+        <div className="container">
+          <div id="accordion">
+            {Object.keys(filterResults).length > 0 ? (
+              Object.entries(filterResults).map(([key, list]) => (
+                <div key={key.replace(/ /g,"_")}>
+                  <h2 id={key.replace(/ /g,"_")} className="card-title mb-4 mt-4 mt-lg-5">{key}</h2>
+                  {list.map(item => (
+                    <div key={item.id} className="card mb-3 shadow border-0">
+                      <div className="card-header border-0 pr-5 position-relative bg-white" id={item.id}>
+                        <h5 className="mb-0" role="button" data-toggle="collapse" data-target={`#item-${item.id}`} aria-expanded="false" aria-controls={item.id}>
+                          <button className="btn btn-link p-0 text-left w-100 position-relative">{ item.questionText }</button>
+                          <img src="/assets/dist/img/icons/add-icon.svg" className='img-fluid search-icon position-absolute' alt='Capital On Tap'/>
+                          <img src="/assets/dist/img/icons/remove-icon.svg" className='img-fluid remove search-icon position-absolute' alt='Capital On Tap'/>
+                        </h5>
+                      </div>
+                      <div id={`item-${item.id}`} className="collapse mx-4" aria-labelledby={item.id} data-parent="#accordion">
+                        <div className="card-body px-0">{ ReactHtmlParser(item.answerCopy) }</div>
+                      </div>    
+                    </div>
+                  ))}
+                </div>
+                )))
+              : <div className="mt-3">
+                  <h4>No results found.</h4>
+                  <a className="blue" href="#">Ask our customer team online</a>
+                </div>
+            }
+          </div>
+        </div>
+      </section>
+    </>
+  )
+};
 
-  }
-
-  init() {
-    if(this.searchInput) {
-      document.addEventListener('keyup', () => {
-        this.search()
-      })
-    }
-
-    if(this.emptySearch) {
-      this.emptySearch.addEventListener('click', () => {
-        this.searchInput.value = ""
-        this.search()
-      })
-    }
-  }
-}
-
-export default FAQSearch;
+const faqElement = document.getElementById('accordion-react')
+ReactDOM.render(
+  <FAQs searchIcon={faqElement.getAttribute('data-search-icon')} />,
+  faqElement
+);
 
 
 
