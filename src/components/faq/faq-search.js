@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import ReactDOM from 'react-dom';
 
-
 function FAQs({searchIcon}) {  
   const [ isActive, setActive ] = useState(false)
 
@@ -115,12 +114,17 @@ function FAQs({searchIcon}) {
   )
 };
 
-const faqElement = document.getElementById('accordion-react')
-ReactDOM.render(
-  <FAQs searchIcon={faqElement.getAttribute('data-search-icon') || ''} />,
-  faqElement
-);
+const FAQSearch = () => {
+  const faqElement = document.getElementById('accordion-react')
+  if(faqElement) {
+    ReactDOM.render(
+      <FAQs searchIcon={faqElement.getAttribute('data-search-icon')} />,
+      faqElement
+    );
+  }
+}
 
+export default FAQSearch
 
 
 
