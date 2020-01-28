@@ -8,6 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 var webpack = require('webpack');
 
 // Import paths and options
@@ -202,6 +203,14 @@ module.exports = (env) => {
                     to: path.resolve(__dirname, setup.paths.rootFilesDist)
                 }
             ]),
+            new BrowserSyncPlugin({
+                host: 'localhost',
+                port: 3000,
+                proxy: 'https://localhost:44372/',
+                files: [
+                    "../Views/**/*.cshtml",
+                ]
+            }),
             // Compress images
             // new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
             // // Compress and export WebP images

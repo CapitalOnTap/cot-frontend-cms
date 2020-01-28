@@ -95,7 +95,7 @@ function FAQs({searchIcon}) {
                           <img src={item.minusIcon} className='img-fluid remove search-icon position-absolute' alt='Capital On Tap'/>
                         </h5>
                       </div>
-                      <div id={`item-${item.id}`} className="collapse mx-4" aria-labelledby={item.id} data-parent="#accordion">
+                      <div id={`item-${item.id}`} className="collapse mx-4" aria-labelledby={item.id}>
                         <div className="card-body px-0">{ ReactHtmlParser(item.answerCopy) }</div>
                       </div>    
                     </div>

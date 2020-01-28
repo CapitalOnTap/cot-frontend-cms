@@ -1,11 +1,7 @@
 .hero-banner{
   background-repeat: no-repeat;
   background-position: top;
-  background-size: cover;
-  min-height: 400px;
-  @include media-breakpoint-up(md){
-    min-height: 500px;
-  }
+  background-size: cover;  
 }
 #card-black{
   left: 50%;
