@@ -1,3 +1,18 @@
+.cards-multirow {  
+  .card-title  {
+    border-bottom: 1px solid;
+  }
+}
+
+.cards-ext {
+  .card-list-items {
+    border-top: 1px solid;
+  }
+  .card-icon {
+    margin-top: -2rem;
+  }
+}
+
 @include media-breakpoint-up(xs) {  
   .container {    
     .card-columns-1 {
@@ -30,13 +45,11 @@
   }
 }
 
-@include media-breakpoint-up(sm) {
-  .cards-module {
-    .card-deck {
-      .card {
-        flex-basis: 33%;
-      }
-    }
+@include media-breakpoint-up(sm) {  
+  .card-deck {
+    .card {
+      flex-basis: 50%;
+    }    
   }
   .container {
     .card-columns-1 {
@@ -73,12 +86,29 @@
   }
 }
 
+@include media-breakpoint-up(md) {
+  .cards-ext {
+    .card {
+      flex-basis: 50%;
+    } 
+  }
+  .cards-multirow {
+    .card {
+      flex-basis: 33%;
+    }    
+  }
+}
+
 @include media-breakpoint-up(lg) {
+  .cards-ext {
+    .card {
+      flex-basis: 0%;
+    } 
+  }
+
   .cards-module {
-    .card-deck {
-      .card {
-        flex-basis: 0;
-      }
+    .card {
+      flex-basis: 0;
     }
   }
   .container {
