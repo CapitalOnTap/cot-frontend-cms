@@ -97,6 +97,11 @@
       flex-basis: 33%;
     }    
   }
+  .cards-team {
+    .card {
+      flex-basis: 30%;
+    }    
+  }
 }
 
 @include media-breakpoint-up(lg) {

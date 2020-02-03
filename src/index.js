@@ -3,6 +3,7 @@ import './scss/main.scss';
 // Bootstrap framework import plugins individually as needed https://getbootstrap.com/docs/4.3/
 import 'bootstrap/js/dist/dropdown.js'
 import 'bootstrap/js/dist/collapse.js';
+import 'bootstrap/js/dist/modal.js';
 
 //Component - FAQ Search
 import FAQSearch from './components/faq/faq-search';

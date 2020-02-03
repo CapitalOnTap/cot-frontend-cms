@@ -84,15 +84,7 @@ module.exports = (env) => {
         },
         stats: 'minimal',
         module: {
-            rules: [
-                {
-                    test: /\.modernizrrc.js$/,
-                    use: [ 'modernizr-loader' ]
-                },
-                {
-                    test: /\.modernizrrc(\.json)?$/,
-                    use: [ 'modernizr-loader', 'json-loader' ]
-                },
+            rules: [                
                 {
                   test: /\.tsx?$/,
                   use: 'ts-loader',
@@ -186,10 +178,7 @@ module.exports = (env) => {
             ]
         },
         resolve: {
-        	extensions: [ '.tsx', '.ts', '.js' ],
-        	alias: {
-            	modernizr$: path.resolve(__dirname, "./../.modernizrrc")
-          	}
+        	extensions: [ '.tsx', '.ts', '.js' ],        	
         },
         plugins: [
             // Delete all files in dist \/
@@ -216,7 +205,7 @@ module.exports = (env) => {
             ]),
             new BrowserSyncPlugin({
                 host: 'localhost',
-                port: 3000,
+                port: 8080,
                 proxy: 'https://localhost:44372/',
                 files: [
                     "../Views/**/*.cshtml",
