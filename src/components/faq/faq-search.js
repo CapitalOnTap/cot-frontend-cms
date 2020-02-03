@@ -1,10 +1,8 @@
-import axios from 'axios';
-import faqConfig from './faqConfig';
 import React, { useState, useEffect } from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import ReactDOM from 'react-dom';
 
-function FAQs({searchIcon}) {  
+function FAQs({searchIcon}) {
   const [ isActive, setActive ] = useState(false)
 
   const [ searchTerm, setSearchTerm ] = useState("");
@@ -12,10 +10,10 @@ function FAQs({searchIcon}) {
     setSearchTerm(event.target.value)
     event.target.value ? setActive(true) : setActive(false)
   }
-  
+
   const [ faqData, setFaqData ] = useState({});
   async function fetchData() {
-    
+
     const lang = document.documentElement.lang ? document.documentElement.lang : 'en';
     const res = await fetch(`/umbraco/surface/faq/search/${lang}`);
 
@@ -26,7 +24,7 @@ function FAQs({searchIcon}) {
         const results = res.reduce((acc, faq) => {
           acc[faq.category] = acc[faq.category] || [];
           acc[faq.category].push(faq);
-          return acc;      
+          return acc;
         },[])
 
         setFaqData(results)
@@ -37,7 +35,7 @@ function FAQs({searchIcon}) {
   useEffect(() => {
     fetchData()
   },[])
-  
+
   const filterResults = !searchTerm
     ? faqData
     : Object.values(faqData).flat()
@@ -45,33 +43,33 @@ function FAQs({searchIcon}) {
     .reduce((acc, faq) => {
       acc[faq.category] = acc[faq.category] || [];
       acc[faq.category].push(faq);
-      return acc;      
+      return acc;
     },[])
-    
+
   return (
     <>
       <section className="container-fluid">
         <div className="container px-0">
           <div className={` ${isActive ? 'active' : ''} form-group position-relative mx-0 mx-md-2 mb-0`}>
             {searchIcon && (
-              <img 
-                data-src={searchIcon} 
-                className='img-fluid search-icon position-absolute' 
-                alt='Capital On Tap' 
+              <img
+                data-src={searchIcon}
+                className='img-fluid search-icon position-absolute'
+                alt='Capital On Tap'
               />
             )}
-            <input 
-              id="faq-search" 
-              type="text" 
+            <input
+              id="faq-search"
+              type="text"
               className="form-control border-0"
               placeholder="What can we help with?"
               value={searchTerm}
               onChange={handleSearchChange}
             />
-            <img 
-              id="clear" 
-              data-src="/assets/dist/img/icons/close-icon.svg" 
-              className='img-fluid close-icon position-absolute' 
+            <img
+              id="clear"
+              data-src="/assets/dist/img/icons/close-icon.svg"
+              className='img-fluid close-icon position-absolute'
               alt='Capital On Tap'
               onClick={() => setSearchTerm("")}
             />
@@ -97,7 +95,7 @@ function FAQs({searchIcon}) {
                       </div>
                       <div id={`item-${item.id}`} className="collapse mx-4" aria-labelledby={item.id}>
                         <div className="card-body px-0">{ ReactHtmlParser(item.answerCopy) }</div>
-                      </div>    
+                      </div>
                     </div>
                   ))}
                 </div>

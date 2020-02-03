@@ -60,5 +60,10 @@ import AOS from 'aos';
 import '../node_modules/aos/dist/aos.css'
 AOS.init()
 
+//Application Form
+import Application from './components/applications/application.js';
+const appForm = new Application
+appForm.init()
+
 // https://daneden.github.io/animate.css/
 import '../node_modules/animate.css/animate.min.css';

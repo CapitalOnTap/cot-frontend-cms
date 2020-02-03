@@ -86,6 +86,14 @@ module.exports = (env) => {
         module: {
             rules: [
                 {
+                    test: /\.modernizrrc.js$/,
+                    use: [ 'modernizr-loader' ]
+                },
+                {
+                    test: /\.modernizrrc(\.json)?$/,
+                    use: [ 'modernizr-loader', 'json-loader' ]
+                },
+                {
                   test: /\.tsx?$/,
                   use: 'ts-loader',
                   exclude: /node_modules/                  
@@ -178,7 +186,10 @@ module.exports = (env) => {
             ]
         },
         resolve: {
-          extensions: [ '.tsx', '.ts', '.js' ],
+        	extensions: [ '.tsx', '.ts', '.js' ],
+        	alias: {
+            	modernizr$: path.resolve(__dirname, "./../.modernizrrc")
+          	}
         },
         plugins: [
             // Delete all files in dist \/
