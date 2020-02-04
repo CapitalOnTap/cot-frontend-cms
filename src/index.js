@@ -24,7 +24,7 @@ import '../node_modules/odometer/odometer.min.js';
 import '../node_modules/odometer/themes/odometer-theme-car.css';
 import COTOdometer from './components/odometer/odometer';
 const odometer = new COTOdometer();
-// odometer.init();
+odometer.init();
 
 // Component - Carousels
 import CarouselStart from './components/carousel/carousel';
