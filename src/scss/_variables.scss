@@ -7,6 +7,10 @@ html {
   }
 }
 
+body {
+  padding: 0 !important;
+}
+
 // Theming Bootstrap Variable defaults https://getbootstrap.com/docs/4.3/getting-started/theming/
 $theme-colors: (
   "primary": #263355,

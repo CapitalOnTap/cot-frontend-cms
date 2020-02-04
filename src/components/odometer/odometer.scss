@@ -1,38 +1,49 @@
 section#odometer{
   background-color: $gray;
+
   .odometer {
     font-size: 2.25rem;
     background: transparent;
     padding: 0 .15rem;
   }
+
   label.odometer-digit{
     padding: 0 2px;   
+
     @include media-breakpoint-up(sm){
       padding: 0 5px;
     }
   }
+
   .odometer-formatting-mark{
     color: $blue;
   }
+
   .odometer-digit {
     height: 45px;
     line-height: 45px;    
     display: inline-block;
     vertical-align: bottom;
-    font-size: $h2-font-size;
+    font-size: 22px;
     box-shadow: none;
-    padding: 2px;
+    padding: 2px 4px 2px 4px;
     margin: 0 2px;
     border-radius: 5px;
     background: $blue;
     color: $white;
-    @include media-breakpoint-up(sm){
+
+    @media screen and (min-width: 375px){
       padding: 2px 5px;
-      font-size: 2.25rem;
+      font-size: 2rem;
       height: 56px;
       line-height: 58px;
     }
+
+    @include media-breakpoint-up(sm){
+      font-size: 2.25rem;
+    }
   }
+
   .odometer-inside {
     display: flex;
     align-items: flex-end;

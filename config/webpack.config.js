@@ -91,12 +91,9 @@ module.exports = (env) => {
                   exclude: /node_modules/                  
                 },
                 {
-                  loader: 'babel-loader',
-                  test: /\.js$/,
-                  exclude: /node_modules/,
-                  query: {
-                    presets: ['@babel/react', '@babel/preset-env']                    
-                  }
+                  test: /\.(js|tsx)$/,
+									exclude: /(node_modules|bower_components)/,
+									loader: 'babel-loader',									                  
                 },
                 {
                   test: /\.s?css$/,

@@ -105,6 +105,14 @@
 }
 
 @include media-breakpoint-up(lg) {
+  .cards-team {
+    .card {
+      &:nth-child(3n+0) {
+        margin-right: 0 !important;
+      }
+    }    
+  }
+
   .cards-ext {
     .card {
       flex-basis: 0%;
